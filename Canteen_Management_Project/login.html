@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Canteen Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body data-page="login">
+
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-icon">🍽️</span> Canteen<span class="accent">+</span></a>
+  <div class="top-actions">
+    <button class="icon-btn" id="themeToggle">🌙</button>
+    <a class="btn btn-outline" href="index.html">Home</a>
+  </div>
+</header>
+
+<main class="auth-page">
+  <section class="auth-card">
+    <div class="auth-brand">🔐</div>
+    <span class="eyebrow">WELCOME BACK</span>
+    <h1>Login</h1>
+    <p class="muted">Select your role and continue to your portal.</p>
+
+    <form id="loginForm">
+      <label>Role</label>
+      <div class="role-switch">
+        <label><input type="radio" name="role" value="student" checked><span>🎓 Student</span></label>
+        <label><input type="radio" name="role" value="staff"><span>👨‍🍳 Staff</span></label>
+      </div>
+
+      <label for="username">Username</label>
+      <input id="username" type="text" placeholder="Enter username" required>
+
+      <label for="password">Password</label>
+      <div class="password-wrap">
+        <input id="password" type="password" placeholder="Enter password" required>
+        <button type="button" id="showPassword">Show</button>
+      </div>
+
+      <button class="btn btn-primary full" type="submit">Login</button>
+      <p id="loginMessage" class="form-message"></p>
+    </form>
+
+    <div class="demo-box">
+      <strong>Frontend demo</strong>
+      <span>Any non-empty username and password will work for now. Real authentication can be added with MySQL/backend later.</span>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

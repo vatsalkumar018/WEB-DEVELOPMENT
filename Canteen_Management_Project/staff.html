@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Portal</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="staff.css">
+</head>
+<body data-page="staff">
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-icon">🍽️</span> Canteen<span class="accent">+</span></a><div class="top-actions"><button class="icon-btn" id="themeToggle">🌙</button><a class="btn btn-outline" href="index.html">Logout</a></div></header>
+<div class="dashboard-shell">
+<aside class="sidebar staff-sidebar">
+<div class="profile-mini"><div class="avatar staff-avatar">S</div><div><strong>Canteen Staff</strong><small>Operations</small></div></div>
+<nav><a class="nav-link active" href="staff.html">🏠 <span>Dashboard</span></a><a class="nav-link" href="staff-orders.html">🧾 <span>Orders</span><span class="nav-badge">6</span></a><a class="nav-link" href="staff-menu.html">🍔 <span>Menu</span></a><a class="nav-link" href="staff-stock.html">📦 <span>Stock</span></a></nav>
+<div class="staff-note"><strong>Kitchen status</strong><span class="online-dot">● Online</span><small>Accepting orders</small></div>
+</aside>
+<main class="dashboard-main">
+<div class="page-head"><div><span class="eyebrow">STAFF PORTAL</span><h1>Canteen overview 👨‍🍳</h1><p>Manage today's operations from one place.</p></div><a class="btn btn-primary" href="staff-orders.html">🧾 View Orders</a></div>
+<div class="stats-grid staff-stats"><div class="stat-card"><span>🧾</span><small>Today's Orders</small><strong>24</strong><em>+4 from yesterday</em></div><div class="stat-card"><span>⏳</span><small>Pending</small><strong>6</strong><em>Needs attention</em></div><div class="stat-card"><span>💰</span><small>Today's Sales</small><strong>₹2,450</strong><em>24 orders</em></div><div class="stat-card"><span>📦</span><small>Low Stock</small><strong>3</strong><em>Check inventory</em></div></div>
+<section class="panel"><div class="panel-head"><div><h2>Orders needing attention</h2><p>Update these orders as the kitchen progresses.</p></div><a class="text-link" href="staff-orders.html">All orders →</a></div>
+<div class="order-row staff-order"><div class="order-food">🥞</div><div class="order-info"><strong>#1042 · Masala Dosa + Tea</strong><small>Student: Vatsal · ₹75</small></div><select class="status-select"><option>Pending</option><option selected>Preparing</option><option>Ready</option><option>Completed</option></select></div>
+<div class="order-row staff-order"><div class="order-food">🍔</div><div class="order-info"><strong>#1043 · Vada Pav × 2</strong><small>Student: Rahul · ₹40</small></div><select class="status-select"><option selected>Pending</option><option>Preparing</option><option>Ready</option><option>Completed</option></select></div>
+</section>
+<div class="quick-grid"><a href="staff-menu.html" class="quick-card"><span>🍔</span><strong>Manage Menu</strong><small>Prices & availability</small></a><a href="staff-stock.html" class="quick-card"><span>📦</span><strong>Manage Stock</strong><small>Inventory overview</small></a><a href="staff-orders.html" class="quick-card"><span>🧾</span><strong>All Orders</strong><small>Process every order</small></a></div>
+</main></div>
+<script src="app.js"></script><script src="staff.js"></script>
+</body></html>
