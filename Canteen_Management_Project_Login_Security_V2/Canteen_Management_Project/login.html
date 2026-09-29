@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Canteen Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body data-page="login">
+
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-icon">🍽️</span> Canteen<span class="accent">+</span></a>
+  <div class="top-actions">
+    <button class="icon-btn" id="themeToggle">🌙</button>
+    <a class="btn btn-outline" href="index.html">Home</a>
+  </div>
+</header>
+
+<main class="auth-page">
+  <section class="auth-card">
+    <div class="auth-brand">🔐</div>
+    <span class="eyebrow">WELCOME BACK</span>
+    <h1>Login</h1>
+    <p class="muted">Sign in to your personal canteen account.</p>
+
+    <form id="loginForm">
+      <label>Role</label>
+      <div class="role-switch">
+        <label><input type="radio" name="role" value="student" checked><span>🎓 Student</span></label>
+        <label><input type="radio" name="role" value="staff"><span>👨‍🍳 Staff</span></label>
+      </div>
+
+      <label for="fullName" id="fullNameLabel">Full name</label>
+      <input id="fullName" type="text" placeholder="Enter your full name" autocomplete="name" required>
+
+      <label for="username">Username</label>
+      <input id="username" type="text" placeholder="Enter username" required>
+
+      <label for="password">Password</label>
+      <div class="password-wrap">
+        <input id="password" type="password" placeholder="Enter password" required>
+        <button type="button" id="showPassword">Show</button>
+      </div>
+
+      <button class="btn btn-primary full" type="submit" id="loginButton">Login</button>
+      <p id="loginMessage" class="form-message"></p>
+      <button type="button" class="auth-switch" id="registerToggle">New student? Create an account</button>
+    </form>
+
+    <div class="demo-box" id="loginHelp">
+      <strong>Account system</strong>
+      <span>Students create their own account. Staff access uses the separate staff role.</span>
+      <span class="staff-demo">Staff demo: <b>staff</b> / <b>staff123</b></span>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+<script src="login.js"></script>
+</body>
+</html>
