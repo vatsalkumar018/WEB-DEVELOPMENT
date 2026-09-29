@@ -1,7 +1,0 @@
-/* Time-based menu UI */
-.menu-session-card{display:flex;align-items:center;gap:16px;margin:0 0 20px;padding:18px 20px;border:1px solid var(--border,#e5e7eb);border-radius:18px;background:var(--card,#fff);box-shadow:0 8px 25px rgba(0,0,0,.05)}
-.session-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:var(--soft,#f3f4f6);font-size:28px;flex:none}
-.session-info{flex:1}.session-title-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.session-title-row h2{margin:0;font-size:20px}.session-info p{margin:4px 0;color:var(--muted,#6b7280)}.session-info small{color:var(--muted,#6b7280)}
-.session-status{font-size:12px;font-weight:800;letter-spacing:.04em}.session-status.open{color:#16a34a}.session-status.closed-status{color:#dc2626}.menu-session-card.closed{opacity:.9}
-.no-menu,.no-results{text-align:center;padding:35px 20px;margin-top:18px;border:1px dashed var(--border,#d1d5db);border-radius:16px;color:var(--muted,#6b7280)}.no-menu div{font-size:34px;margin-bottom:8px}.no-menu h3{margin:0 0 6px;color:var(--text,#111827)}
-@media(max-width:650px){.menu-session-card{align-items:flex-start}.session-title-row h2{font-size:18px}}
