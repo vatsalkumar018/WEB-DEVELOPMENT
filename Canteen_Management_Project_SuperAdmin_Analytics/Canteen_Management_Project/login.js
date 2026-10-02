@@ -7,7 +7,8 @@ const loginButton = document.getElementById("loginButton");
 const loginHelp = document.getElementById("loginHelp");
 let registerMode = false;
 
-const STAFF_ACCOUNT = { username: "staff", password: "staff123", name: "Canteen Staff", role: "staff" };
+const STAFF_ACCOUNT = { username: "staff", password: "staff123", name: "Canteen Staff", role: "staff", active: true };
+const ADMIN_ACCOUNT = { username: "admin", password: "admin123", name: "Canteen Super Admin", role: "admin" };
 
 if (showPassword) {
   showPassword.addEventListener("click", () => {
@@ -24,7 +25,7 @@ function selectedRole() {
 function updateAuthMode() {
   const role = selectedRole();
   // Registration is only for students.
-  if (role === "staff") registerMode = false;
+  if (role === "staff" || role === "admin") registerMode = false;
   fullName.style.display = registerMode ? "block" : "none";
   fullNameLabel.style.display = registerMode ? "block" : "none";
   fullName.required = registerMode;
@@ -57,7 +58,7 @@ loginForm?.addEventListener("submit", e => {
   if (registerMode) {
     if (role !== "student") return;
     const accounts = JSON.parse(localStorage.getItem("canteenAccounts") || "[]");
-    if (username === STAFF_ACCOUNT.username || accounts.some(a => a.username === username)) {
+    if ([STAFF_ACCOUNT.username, ADMIN_ACCOUNT.username].includes(username) || accounts.some(a => a.username === username)) {
       message.textContent = "That username is already in use.";
       message.style.color = "#b42318";
       return;
@@ -69,14 +70,19 @@ loginForm?.addEventListener("submit", e => {
     message.textContent = "Student account created. Opening your portal...";
   } else {
     let account = null;
-    if (role === "staff") {
-      if (username === STAFF_ACCOUNT.username && password === STAFF_ACCOUNT.password) account = STAFF_ACCOUNT;
+    if (role === "admin") {
+      if (username === ADMIN_ACCOUNT.username && password === ADMIN_ACCOUNT.password) account = ADMIN_ACCOUNT;
+    } else if (role === "staff") {
+      const staffAccounts = JSON.parse(localStorage.getItem("canteenStaffAccounts") || "[]");
+      const dynamicStaff = staffAccounts.find(a => a.username === username && a.password === password && a.role === "staff" && a.active !== false);
+      if (dynamicStaff) account = dynamicStaff;
+      else if (username === STAFF_ACCOUNT.username && password === STAFF_ACCOUNT.password) account = STAFF_ACCOUNT;
     } else {
       const accounts = JSON.parse(localStorage.getItem("canteenAccounts") || "[]");
       account = accounts.find(a => a.username === username && a.password === password && a.role === "student");
     }
     if (!account) {
-      message.textContent = role === "staff" ? "Invalid staff credentials." : "Invalid student username or password.";
+      message.textContent = role === "admin" ? "Invalid Super Admin credentials." : role === "staff" ? "Invalid staff credentials or inactive account." : "Invalid student username or password.";
       message.style.color = "#b42318";
       return;
     }
@@ -85,5 +91,5 @@ loginForm?.addEventListener("submit", e => {
   }
 
   message.style.color = "#16834b";
-  setTimeout(() => { window.location.href = role === "staff" ? "staff.html" : "student.html"; }, 350);
+  setTimeout(() => { window.location.href = role === "admin" ? "super-admin.html" : role === "staff" ? "staff.html" : "student.html"; }, 350);
 });
