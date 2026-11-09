@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#9e4200", "surface-container": "#f0eded", "on-secondary-fixed-variant": "#234f30", "on-tertiary": "#ffffff", "surface-container-low": "#f6f3f2", "tertiary": "#645e50", "surface-dim": "#dcd9d9", "on-error": "#ffffff", "surface": "#fcf9f8", "secondary-fixed": "#bdefc4", "surface-bright": "#fcf9f8", "on-primary-container": "#511e00", "primary-fixed": "#ffdbcb", "on-surface": "#1c1b1b", "on-surface-variant": "#574239", "error": "#ba1a1a", "tertiary-container": "#9d9485", "surface-variant": "#e5e2e1", "error-container": "#ffdad6", "background": "#fcf9f8", "primary-fixed-dim": "#ffb691", "on-secondary-fixed": "#00210c", "inverse-on-surface": "#f3f0ef", "on-secondary": "#ffffff", "on-primary-fixed": "#341100", "secondary-fixed-dim": "#a2d2a9", "surface-container-lowest": "#ffffff", "primary-container": "#e87532", "on-tertiary-container": "#322d22", "on-primary-fixed-variant": "#793100", "on-primary": "#ffffff", "outline-variant": "#dec1b4", "outline": "#8a7267", "surface-tint": "#9e4200", "inverse-primary": "#ffb691", "secondary-container": "#bdefc4", "on-background": "#1c1b1b", "on-secondary-container": "#416e4c", "surface-container-highest": "#e5e2e1", "tertiary-fixed": "#ece1d0", "secondary": "#3b6846", "tertiary-fixed-dim": "#cfc5b5", "inverse-surface": "#313030", "on-error-container": "#93000a", "on-tertiary-fixed": "#201b11", "on-tertiary-fixed-variant": "#4c4639", "surface-container-high": "#eae7e7" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1rem", "space-xl": "2.5rem", "gutter-tablet": "1.5rem", "margin": "1rem", "gutter-desktop": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "margin-tablet": "2rem", "space-xs": "0.25rem", "margin-desktop": "3rem", "space-sm": "0.5rem" }, fontFamily: { "body-md": ["Inter"], "display-hero": ["Sora"], "token-callout": ["Sora"], "label-lg": ["Plus Jakarta Sans"], "numeric-data": ["Sora"], "body-sm": ["Inter"], "token-callout-mobile": ["Sora"], "headline-lg": ["Sora"], "body-lg": ["Inter"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Sora"], "label-sm": ["Plus Jakarta Sans"], "display-hero-mobile": ["Sora"] }, fontSize: { "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-hero": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "token-callout": ["38px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "600" }], "numeric-data": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "token-callout-mobile": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }], "display-hero-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-gutter flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Token &amp; Bite Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBeIhLwcStAFpbewB_LiVA5M8AB-UB7_coTr295WAKCNJaUtCy8y3TMbfXa8IjGFJSkgHwPKGF-TWCIFovCoOzcmcHakfQFEJoO6Ubj32rC-YiNyJym5gtt64Xl6MFJFeL-tWAvmLSe6ySbuD4ehY0Zu0O1TlOqL6f7nvyoPK2SF1cEOndajt7qsPFLClWCJaFuaN-_1KyX1ZVGLhmWFYv0Wxh3w5DUTBxV3jVR3Vxg4w"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">Token &amp; Bite</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Menu</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Campus Block 4 Canteen</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center bg-surface-container-high p-0.5 rounded-full"><button class="min-w-[28px] h-7 px-1.5 rounded-full font-label-sm text-label-sm bg-surface text-primary shadow-[0_1px_4px_rgba(0,0,0,0.04)] font-bold transition-colors" type="button">EN</button><button class="min-w-[28px] h-7 px-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">HI</button><button class="min-w-[28px] h-7 px-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">GU</button></div><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAveiXhp6GBrQ9td0xJfD0cDCW6rB8lwWEaOpnJ02qC4nN_bA0OPf1mGfbUn5rCzEAiZlmEO3x-oNFeKCIpTuBPUdHDbHjIHbsAVtoIiwxDyHN1Xn_bV7o61FnKq7JIwnXuU_GpD5Rwx9Tom9IBja_SCr-ApwQzEGsjXn5fxu4OJm00R2P496fprVcFGbY_vKNKA3T2Bm-ZaAAwjiEcIZEUvuO3gu35q7TIBlxKlhBB"/><span class="absolute -bottom-1 -right-1 px-1 rounded-full bg-secondary text-on-secondary font-label-sm text-[9px] uppercase tracking-wider leading-tight shadow-sm">STD</span></div></div></div><div class="flex items-center justify-between"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container/60"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-container font-semibold">Canteen Open (Avg 8m wait)</span></div><span class="font-label-sm text-label-sm text-tertiary">Fast-Lane Active</span></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Meal Period Banner & Quick Schedule Track -->
+<div class="px-gutter pt-space-sm pb-space-md flex flex-col gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Good afternoon 👋</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+          Live Kitchen
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Lunch is currently being served <span class="font-semibold text-primary">(11:00 AM – 4:00 PM)</span>
+</p>
+<!-- Horizontal Service Times Carousel -->
+<div class="flex items-center gap-2 overflow-x-auto pt-space-xs -mx-1 px-1">
+<div class="flex-shrink-0 px-2.5 py-1 rounded-lg bg-surface-container text-tertiary font-label-sm text-label-sm">
+          Breakfast <span class="opacity-70">7–11am</span>
+</div>
+<div class="flex-shrink-0 px-2.5 py-1 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm">
+          Lunch <span class="opacity-90">11–4pm</span>
+</div>
+<div class="flex-shrink-0 px-2.5 py-1 rounded-lg bg-surface-container text-tertiary font-label-sm text-label-sm">
+          Snacks <span class="opacity-70">4–7pm</span>
+</div>
+<div class="flex-shrink-0 px-2.5 py-1 rounded-lg bg-surface-container text-tertiary font-label-sm text-label-sm">
+          Dinner <span class="opacity-70">7–9pm</span>
+</div>
+</div>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto py-1">
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-sm transition-all">
+        All Items
+      </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">
+        Meals &amp; Thalis <span class="opacity-60 text-xs">(3)</span>
+</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">
+        Beverages <span class="opacity-60 text-xs">(4)</span>
+</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">
+        Quick Snacks <span class="opacity-60 text-xs">(5)</span>
+</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-colors">
+        Desserts <span class="opacity-60 text-xs">(2)</span>
+</button>
+</div>
+</div>
+<!-- Food Menu Grid Section -->
+<div class="px-gutter pb-44 flex flex-col gap-space-md">
+<!-- Item 1: Special Thali (Highlighted Card) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm active:scale-[0.99] transition-transform cursor-pointer" onclick="openItemSheet()">
+<div class="flex gap-space-md">
+<div class="relative w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Vibrant Indian Special Thali platter neatly served in brass bowls with soft butter rotis, aromatic basmati rice, steaming paneer lababdar gravy, yellow dal tadka, sweet gulab jamun, and cool curd garnished with mint in warm afternoon cafeteria lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL1N8z8tWkF6ssLI5d-Pp_esoRXDsHadwkqzeVgetvYgUxZNijjJZgC_q3QlzsvePdsOkTHyStkE-nCkP9Rt4XV8cIQ2qXl5A07p4wKcWkH01uptuhvXQ6EdsSSa0tKcok4gBTnBBCY_x2od8Wp7YjadOkRXnG2xV-v6r-i3ayoDtkU1QldbCr4VfSQZJj8G_SMhC2aA-8VDmPdXPYuVVTtMFTwvWMTgRZNJIzuDwQ"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-[10px] tracking-wide font-bold uppercase">Veg</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-[11px] font-semibold">Chef's Special</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 truncate">Special Thali</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              Basmati rice, 2 rotis, paneer lababdar, dal fry, fresh curd, and hot gulab jamun.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-numeric-data text-headline-sm text-on-surface">₹90</span>
+<!-- Interactive Counter Pill -->
+<div class="flex items-center bg-surface-container-high rounded-full p-0.5 shadow-sm" onclick="event.stopPropagation()">
+<button class="w-8 h-8 rounded-full flex items-center justify-center font-headline-sm text-on-surface hover:bg-surface-container-highest transition-colors active:scale-90" onclick="decrementCounter(this, event)">−</button>
+<span class="w-7 text-center font-numeric-data text-label-md text-on-surface">1</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center font-headline-sm text-primary hover:bg-surface-container-highest transition-colors active:scale-90" onclick="incrementCounter(this, event)">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Regular Thali -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex gap-space-md">
+<div class="relative w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Traditional Indian daily regular thali meal with three soft phulkas, comforting yellow dal tadka, fresh seasonal spiced cauliflower subzi, and jeera tempered basmati rice arranged cleanly on a modern steel plate in warm natural dining daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOVxouGD9Lbx9Wl_sYsmbtMWRzbKR6mEdEsmo64MFyFWvZOiz1szf5DFVbkatue3zkyO4AztQDaq16i0VRgDRqZoAfuMiXX5uKvR_K4LA0t3dSXwFN_rmbEHssWUfjPu6N9Cx5V3iSJGFqhKHjRjwD9qQMzCwZeP55ehTh8O48cj5Hd8vadgt2CIPFaO0q2H68HhOyQvnzv4OnTvRLTPLnFfVNpmUopRPKXnSNC3TN"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-[10px] tracking-wide font-bold uppercase">Veg</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Regular Thali</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              3 soft rotis, homestyle dal tadka, dry seasonal subzi, and steamed jeera rice.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-numeric-data text-headline-sm text-on-surface">₹65</span>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all active:scale-95 shadow-sm">
+              + Add
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3: Cold Coffee -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex gap-space-md">
+<div class="relative w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Iced cold frappe coffee in a ribbed modern takeaway glass cup with espresso swirl, frothy velvety crema foam on top, chilled condensed milk aesthetic, campus canteen snack vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk-SitAYbmDgmLuE60Yj1xnyBhMnMCQpBgiKLAhts2fhxnKhMOpqgAw3HdNHYXjSOzLl5kaskNvacv6DZT6YFRkHKlGZz6pDGnOYreeD9bgMIg-tjmFLbbBwaGxpWwDxBvLTwnR8hembdorPyOdfc7pQeHyD9p-MWmMVxd51EJrIM0VSwndd0-TF_wnW41uH04yQEFg8ohFKCfVqJhDd57uhc_RPYEJ-JgrcRt-T5d"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-[10px] tracking-wide font-bold uppercase">Bev</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold">Fast Prep • 3m</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 truncate">Cold Coffee</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              Chilled creamy espresso blend shaken over ice with smooth chocolate drizzle.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-numeric-data text-headline-sm text-on-surface">₹50</span>
+<!-- Interactive Counter Pill -->
+<div class="flex items-center bg-surface-container-high rounded-full p-0.5 shadow-sm">
+<button class="w-8 h-8 rounded-full flex items-center justify-center font-headline-sm text-on-surface hover:bg-surface-container-highest transition-colors active:scale-90" onclick="decrementCounter(this, event)">−</button>
+<span class="w-7 text-center font-numeric-data text-label-md text-on-surface">1</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center font-headline-sm text-primary hover:bg-surface-container-highest transition-colors active:scale-90" onclick="incrementCounter(this, event)">+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 4: Crispy Punjabi Samosa -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex gap-space-md">
+<div class="relative w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Two freshly fried golden Punjabi samosas with flaky crust served with tangy tamarind chutney and emerald spicy mint sauce on kraft food liner paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwiX6BVL7-l3aKb-12KjDFjSKs7Qyaee0iMrFsEuaU74Kr0Vh2CsSRAY4FKsqR2YrvTP__uQHnqly-34f9zYjCb5Yy6EXuV__NehP7_c2jdI_tZ9cHW_LbIUHqHvwWF0i24THThRAyNfbF5M5UQ25-WW7YwJwzf_JVDl0UDi5Ybgn3AJtl5GqX9Bqqr_tB_2esXAxuxTfOVRo7fb1EEAjjHh4DP6O5nz0-YXEYbwOZ"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-[10px] tracking-wide font-bold uppercase">Snack</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Crispy Punjabi Samosa (2 pcs)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              Spiced potato and green pea filling, served with fresh mint and sweet tamarind chutney.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-numeric-data text-headline-sm text-on-surface">₹30</span>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all active:scale-95 shadow-sm">
+              + Add
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 5: Hot Masala Chai -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex gap-space-md">
+<div class="relative w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Steaming hot Indian masala cutting chai poured in traditional glass tumbler with fresh ginger aroma, star anise and crushed cardamom seed pods nearby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx6bzhTxdrPRdcXM05g-mfEFD9LCy0m15QnQ0plxX--WaG6rrvf_rbc0TqLY3PQV8QkVzspycFyYI4P8XLsYGSLo7Lvv77djzZp3Gfjz9y_RaQvUUeWMZ6n3j452_0hUAIUQhKMGeil8r6N7tRXlVHfQVnwFDoMfjiLMxU2bYtqZYbDuMr5Bl-jCIycg0CxJIA_t1Tu23nZnSLSV_TdeepnKGV8k4LQRuoDRm83rRo"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] tracking-wide font-bold uppercase">Hot</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Hot Masala Chai</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              Fresh ginger and cardamom brewed tea with buffalo milk, served piping hot.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-numeric-data text-headline-sm text-on-surface">₹15</span>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all active:scale-95 shadow-sm">
+              + Add
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 6: Cheese Maggi -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex gap-space-md">
+<div class="relative w-28 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Bowl of steaming hot yellow Maggi noodles topped with melted cheddar cheese pull, sweet corn kernels, chili flakes, and fresh cilantro herb garnish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6KKbl4Y0kqdTlPtbjlfEoFMSiOPSRgCWN8Gl2ObDkXWFBRIodaj2GASswnuVDIIFYtm8J7iAlhszBS8coF60oVFXEwUz_mVpHiev3OwKmxf1VHixWy6o7S8N7f5raTtzw1ja3i1hj0shl8ooy_I23LFtMeEYufQzwuLiYXG96tkqSf79Mcu6rX6088cydqb4CuE1Wmo4hQIlTa9dFNtfg6vS41GUPqGw_2KbEZ6KY"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-[10px] tracking-wide font-bold uppercase">Veg</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Cheese Maggi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">
+              Double cheese blend, butter sautéed sweet corn, and authentic canteen tastemaker spices.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-numeric-data text-headline-sm text-on-surface">₹45</span>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all active:scale-95 shadow-sm">
+              + Add
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Minimal Floating Cart Tray -->
+<aside aria-label="Order Cart Summary" class="fixed bottom-20 left-0 right-0 px-gutter z-30 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto bg-inverse-surface text-inverse-on-surface rounded-2xl p-space-sm shadow-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm pl-2">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-numeric-data text-label-md font-bold">
+          2
+        </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-surface-variant font-medium">In your tray</span>
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface leading-tight">₹140</span>
+</div>
+</div>
+<button class="px-4 py-2.5 rounded-xl bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md font-bold transition-all active:scale-95 shadow-md flex items-center gap-1.5">
+<span>VIEW CART</span>
+<span class="material-symbols-outlined text-lg leading-none">arrow_forward</span>
+</button>
+</div>
+</aside>
+<!-- Interactive Product Detail Bottom Sheet Modal Overlay -->
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-40 transition-opacity duration-300 flex items-end justify-center" id="product-detail-backdrop">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-3xl shadow-2xl overflow-hidden flex flex-col max-h-[777px] transform transition-transform duration-300" id="product-detail-sheet">
+<!-- Sheet Drag Indicator & Header -->
+<div class="relative w-full pt-3 pb-2 flex flex-col items-center bg-surface-container-lowest">
+<div class="w-12 h-1 rounded-full bg-surface-container-highest"></div>
+<button class="absolute top-3 right-4 w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="closeItemSheet()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Scrollable Sheet Content -->
+<div class="overflow-y-auto px-gutter pb-6 flex flex-col gap-space-md">
+<!-- Large Appetizing Food Image -->
+<div class="relative w-full h-44 rounded-2xl overflow-hidden bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Top down overhead close-up shot of an authentic Indian Special Thali feast with fragrant basmati rice bowl, rich shahi paneer curry with swirl of cream, dark spiced dal makhani, layered butter rotis, crispy roasted papad, crunchy onion salad, and glistening warm gulab jamun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlgXySH8NfbFqvx7g1CuTu8g7uxGljHutxqkgjUBAMa9FS0gomdZRH4J7MVn5rDpGhqfcYjfv9hU-3V7e8bmnEuYb0Qsj-CjJUo5yV0VyUxsv9V5Xq2F9HQ1HBO9tCGKgxRGNNcRxW58G9ID3gHp6UL6eQgcTOt3aJPl8cs1JGEHyqwU9pCQvSYESRoyrRW6WKXSwOJA6zDs_Ev9WUqS1xGSsuibNEMJzh1nZzzowB"/>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm">
+              100% Pure Veg
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">
+              🔥 680 kcal
+            </span>
+</div>
+</div>
+<!-- Title, Price & Description -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">Special Thali</h2>
+<span class="font-token-callout-mobile text-token-callout-mobile text-primary font-bold">₹90</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            A complete balanced mid-day feast carefully prepared in the central campus mess. Cooked with low saturated oil, aromatic whole spices, and farm-fresh paneer.
+          </p>
+</div>
+<!-- Ingredients Included Tag Matrix -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Platter Includes</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm">Basmati Rice</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm">Shahi Paneer</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm">Dal Makhani</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm">2 Butter Rotis</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm">Sweet Curd</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm">Gulab Jamun</span>
+</div>
+</div>
+<!-- Add-on Customisation Checkboxes -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Customize Platter</span>
+<span class="font-body-sm text-body-sm text-tertiary">Optional</span>
+</div>
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-3">
+<input checked="" class="w-5 h-5 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface font-medium">Extra Butter Roti (1 pc)</span>
+</div>
+<span class="font-numeric-data text-label-md text-on-surface font-semibold">+₹10</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface font-medium">Roasted Urad Papad</span>
+</div>
+<span class="font-numeric-data text-label-md text-on-surface font-semibold">+₹10</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface font-medium">Extra Curd Bowl (100ml)</span>
+</div>
+<span class="font-numeric-data text-label-md text-on-surface font-semibold">+₹15</span>
+</label>
+</div>
+<!-- Quantity & Add Button Bottom Trigger -->
+<div class="pt-2 flex items-center gap-3">
+<div class="flex items-center bg-surface-container rounded-full p-1 shadow-inner">
+<button class="w-10 h-10 rounded-full flex items-center justify-center font-headline-sm text-on-surface hover:bg-surface-container-highest transition-colors active:scale-90" onclick="decrementCounter(this, event)">−</button>
+<span class="w-8 text-center font-numeric-data text-headline-sm text-on-surface font-bold">1</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center font-headline-sm text-primary hover:bg-surface-container-highest transition-colors active:scale-90" onclick="incrementCounter(this, event)">+</button>
+</div>
+<button class="flex-1 py-3.5 px-6 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-lg text-label-lg font-bold shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2" onclick="closeItemSheet()">
+<span>Add to Order</span>
+<span>•</span>
+<span class="font-numeric-data">₹90</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function openItemSheet() {
+    const backdrop = document.getElementById('product-detail-backdrop');
+    if (backdrop) {
+      backdrop.classList.remove('hidden');
+      backdrop.style.opacity = '1';
+      backdrop.style.pointerEvents = 'auto';
+    }
+  }
+
+  function closeItemSheet() {
+    const backdrop = document.getElementById('product-detail-backdrop');
+    if (backdrop) {
+      backdrop.style.opacity = '0';
+      backdrop.style.pointerEvents = 'none';
+      setTimeout(() => {
+        backdrop.classList.add('hidden');
+      }, 250);
+    }
+  }
+
+  function incrementCounter(btn, evt) {
+    if (evt) evt.stopPropagation();
+    const span = btn.parentElement.querySelector('span');
+    if (span) {
+      let val = parseInt(span.innerText, 10) || 0;
+      span.innerText = val + 1;
+    }
+  }
+
+  function decrementCounter(btn, evt) {
+    if (evt) evt.stopPropagation();
+    const span = btn.parentElement.querySelector('span');
+    if (span) {
+      let val = parseInt(span.innerText, 10) || 0;
+      if (val > 1) {
+        span.innerText = val - 1;
+      }
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-gutter"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-primary font-bold" data-path="menu" href="#"><span class="material-symbols-outlined text-[22px]">restaurant_menu</span><span class="font-label-sm text-label-sm">Menu</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="live-token" href="#"><span class="material-symbols-outlined text-[22px]">confirmation_number</span><span class="font-label-sm text-label-sm">Live Token</span><span class="absolute top-1 right-2 min-w-[16px] h-4 px-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] flex items-center justify-center font-bold">1</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="kitchen-ops" href="#"><span class="material-symbols-outlined text-[22px]">soup_kitchen</span><span class="font-label-sm text-label-sm">Kitchen</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="profile-history" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

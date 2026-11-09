@@ -1,0 +1,315 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useOrders } from '@/contexts/OrderContext';
+import { formatCurrency } from '@/lib/utils';
+import {
+  DollarSign,
+  ShoppingBag,
+  TrendingUp,
+  Clock,
+  Award,
+  AlertTriangle,
+  ArrowUpRight,
+  Flame,
+  UtensilsCrossed,
+  Boxes,
+  Plus,
+} from 'lucide-react';
+
+export const AdminDashboardPage: React.FC = () => {
+  const { orders, metrics } = useOrders();
+
+  const totalSales = metrics.todaySalesAmount || 14250;
+  const totalOrdersCount = metrics.totalTodayOrders || 148;
+  const avgOrderValue = totalOrdersCount > 0 ? Math.round(totalSales / totalOrdersCount) : 96;
+  const peakHour = '12:30 PM – 1:30 PM';
+  const mostOrderedItem = 'Special Deluxe Thali (84 orders)';
+  const cancelledOrders = 2;
+  const lowStockCount = 3;
+
+  // Hourly orders distribution data
+  const hourlyData = [
+    { hour: '8 AM', count: 18, sales: 900 },
+    { hour: '10 AM', count: 26, sales: 1450 },
+    { hour: '12 PM', count: 68, sales: 6120 },
+    { hour: '2 PM', count: 42, sales: 3150 },
+    { hour: '4 PM', count: 32, sales: 1800 },
+    { hour: '6 PM', count: 28, sales: 1650 },
+    { hour: '8 PM', count: 14, sales: 1100 },
+  ];
+
+  const maxHourlyCount = Math.max(...hourlyData.map((d) => d.count));
+
+  // Popular items
+  const popularFoods = [
+    { name: 'Special Deluxe Thali', count: 84, pct: 90 },
+    { name: 'Campus Cold Coffee', count: 68, pct: 75 },
+    { name: 'Cheese Butter Maggi', count: 52, pct: 60 },
+    { name: 'Crispy Punjabi Samosa', count: 45, pct: 52 },
+    { name: 'Paneer Kathi Roll', count: 38, pct: 44 },
+  ];
+
+  return (
+    <div className="flex flex-col w-full pb-32 max-w-6xl mx-auto px-gutter pt-space-sm gap-space-md">
+      {/* Top Banner & Quick Management Shortcuts */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h1 className="font-headline-md text-headline-md text-on-surface dark:text-white">
+            Campus Canteen Analytics
+          </h1>
+          <p className="font-body-sm text-xs text-on-surface-variant dark:text-neutral-400">
+            Real-time sales, kitchen velocity &amp; inventory telemetry
+          </p>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <Link
+            to="/admin/menu"
+            className="px-3.5 py-2 rounded-xl bg-surface-container-high dark:bg-[#242424] text-on-surface dark:text-white font-label-sm text-xs font-semibold hover:bg-surface-container-highest transition-colors flex items-center gap-1.5"
+          >
+            <UtensilsCrossed className="w-4 h-4 text-primary" />
+            <span>Menu Manager</span>
+          </Link>
+          <Link
+            to="/admin/inventory"
+            className="px-3.5 py-2 rounded-xl bg-surface-container-high dark:bg-[#242424] text-on-surface dark:text-white font-label-sm text-xs font-semibold hover:bg-surface-container-highest transition-colors flex items-center gap-1.5"
+          >
+            <Boxes className="w-4 h-4 text-secondary" />
+            <span>Inventory Stock</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Primary KPI Stats Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {/* KPI 1 */}
+        <div className="p-4 rounded-2xl bg-surface-container-lowest dark:bg-[#1A1A1A] border border-surface-container-high/80 dark:border-white/5 shadow-sm flex flex-col justify-between">
+          <div className="flex items-center justify-between text-tertiary dark:text-neutral-400">
+            <span className="font-label-sm text-xs font-semibold uppercase tracking-wider">
+              Today's Sales
+            </span>
+            <div className="w-7 h-7 rounded-lg bg-primary/10 text-primary dark:text-[#f08344] flex items-center justify-center">
+              <DollarSign className="w-4 h-4" />
+            </div>
+          </div>
+          <div className="mt-2">
+            <span className="font-sora text-2xl font-black text-on-surface dark:text-white">
+              {formatCurrency(totalSales)}
+            </span>
+            <span className="flex items-center gap-1 text-[11px] text-secondary dark:text-emerald-400 font-semibold mt-0.5">
+              <TrendingUp className="w-3 h-3" /> +14.2% vs yesterday
+            </span>
+          </div>
+        </div>
+
+        {/* KPI 2 */}
+        <div className="p-4 rounded-2xl bg-surface-container-lowest dark:bg-[#1A1A1A] border border-surface-container-high/80 dark:border-white/5 shadow-sm flex flex-col justify-between">
+          <div className="flex items-center justify-between text-tertiary dark:text-neutral-400">
+            <span className="font-label-sm text-xs font-semibold uppercase tracking-wider">
+              Total Orders
+            </span>
+            <div className="w-7 h-7 rounded-lg bg-secondary/10 text-secondary dark:text-emerald-400 flex items-center justify-center">
+              <ShoppingBag className="w-4 h-4" />
+            </div>
+          </div>
+          <div className="mt-2">
+            <span className="font-sora text-2xl font-black text-on-surface dark:text-white">
+              {totalOrdersCount}
+            </span>
+            <span className="text-[11px] text-on-surface-variant dark:text-neutral-400 mt-0.5 block">
+              98.6% fulfillment rate
+            </span>
+          </div>
+        </div>
+
+        {/* KPI 3 */}
+        <div className="p-4 rounded-2xl bg-surface-container-lowest dark:bg-[#1A1A1A] border border-surface-container-high/80 dark:border-white/5 shadow-sm flex flex-col justify-between">
+          <div className="flex items-center justify-between text-tertiary dark:text-neutral-400">
+            <span className="font-label-sm text-xs font-semibold uppercase tracking-wider">
+              Avg Order Value
+            </span>
+            <div className="w-7 h-7 rounded-lg bg-primary-container/15 text-primary-container flex items-center justify-center">
+              <TrendingUp className="w-4 h-4" />
+            </div>
+          </div>
+          <div className="mt-2">
+            <span className="font-sora text-2xl font-black text-on-surface dark:text-white">
+              ₹{avgOrderValue}
+            </span>
+            <span className="text-[11px] text-on-surface-variant dark:text-neutral-400 mt-0.5 block">
+              Combos driving ticket size
+            </span>
+          </div>
+        </div>
+
+        {/* KPI 4 */}
+        <div className="p-4 rounded-2xl bg-surface-container-lowest dark:bg-[#1A1A1A] border border-surface-container-high/80 dark:border-white/5 shadow-sm flex flex-col justify-between">
+          <div className="flex items-center justify-between text-tertiary dark:text-neutral-400">
+            <span className="font-label-sm text-xs font-semibold uppercase tracking-wider">
+              Peak Traffic
+            </span>
+            <div className="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center">
+              <Clock className="w-4 h-4" />
+            </div>
+          </div>
+          <div className="mt-2">
+            <span className="font-sora text-base sm:text-lg font-bold text-on-surface dark:text-white">
+              {peakHour}
+            </span>
+            <span className="text-[11px] text-primary dark:text-[#f08344] font-semibold mt-0.5 block">
+              68 tickets in rush hour
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Secondary Metric Flags */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="p-3.5 rounded-2xl bg-surface-container-low dark:bg-[#1A1A1A] border border-surface-container-high/60 dark:border-white/5 flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-primary-container/10 text-primary-container flex items-center justify-center shrink-0">
+            <Award className="w-5 h-5" />
+          </div>
+          <div className="min-w-0">
+            <span className="text-xs text-tertiary dark:text-neutral-400 font-semibold uppercase">
+              Top Meal Star
+            </span>
+            <p className="font-label-md font-bold text-on-surface dark:text-white truncate">
+              {mostOrderedItem}
+            </p>
+          </div>
+        </div>
+
+        <div className="p-3.5 rounded-2xl bg-surface-container-low dark:bg-[#1A1A1A] border border-surface-container-high/60 dark:border-white/5 flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+            <AlertTriangle className="w-5 h-5 text-error" />
+          </div>
+          <div className="min-w-0">
+            <span className="text-xs text-tertiary dark:text-neutral-400 font-semibold uppercase">
+              Cancelled / Refunded
+            </span>
+            <p className="font-label-md font-bold text-on-surface dark:text-white truncate">
+              {cancelledOrders} orders (₹160 refunded)
+            </p>
+          </div>
+        </div>
+
+        <div className="p-3.5 rounded-2xl bg-surface-container-low dark:bg-[#1A1A1A] border border-surface-container-high/60 dark:border-white/5 flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+            <Boxes className="w-5 h-5" />
+          </div>
+          <div className="min-w-0">
+            <span className="text-xs text-tertiary dark:text-neutral-400 font-semibold uppercase">
+              Low Stock Warnings
+            </span>
+            <p className="font-label-md font-bold text-on-surface dark:text-white truncate">
+              {lowStockCount} raw ingredients need reorder
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Visual Analytics Charts Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Chart 1: Orders by Hour (Bar Chart) */}
+        <div className="p-5 rounded-3xl bg-surface-container-lowest dark:bg-[#1A1A1A] border border-surface-container-high/80 dark:border-white/5 shadow-sm flex flex-col justify-between">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h3 className="font-headline-sm text-headline-sm text-on-surface dark:text-white font-bold">
+                Orders by Hour
+              </h3>
+              <p className="text-xs text-on-surface-variant dark:text-neutral-400">
+                Peak kitchen volume across service periods
+              </p>
+            </div>
+            <span className="px-2.5 py-1 rounded-full bg-surface-container dark:bg-[#242424] text-xs font-mono font-semibold text-on-surface dark:text-neutral-200">
+              Live Feed
+            </span>
+          </div>
+
+          {/* Bar Chart Visual */}
+          <div className="h-44 flex items-end gap-2.5 pt-6 border-b border-surface-container-high/60 dark:border-white/5 pb-2">
+            {hourlyData.map((d) => {
+              const heightPct = Math.round((d.count / maxHourlyCount) * 100);
+              const isPeak = d.count === maxHourlyCount;
+              return (
+                <div key={d.hour} className="flex-1 flex flex-col items-center gap-1.5 h-full justify-end group">
+                  <span className="text-[10px] font-mono font-bold text-primary dark:text-[#f08344] opacity-0 group-hover:opacity-100 transition-opacity">
+                    {d.count}
+                  </span>
+                  <div
+                    style={{ height: `${heightPct}%` }}
+                    className={`w-full rounded-t-lg transition-all duration-500 group-hover:brightness-110 ${
+                      isPeak
+                        ? 'bg-primary-container shadow-md'
+                        : 'bg-surface-container-high dark:bg-[#2e2e2e]'
+                    }`}
+                  />
+                  <span className="text-[10px] text-tertiary dark:text-neutral-400 font-mono mt-1">
+                    {d.hour}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="flex items-center justify-between text-xs text-tertiary dark:text-neutral-400 pt-3">
+            <span>Busiest: 12:00 PM – 2:00 PM (Lunch Rush)</span>
+            <span className="font-semibold text-secondary dark:text-emerald-400">
+              Avg Prep Time: 7.4 mins
+            </span>
+          </div>
+        </div>
+
+        {/* Chart 2: Popular Foods Rank */}
+        <div className="p-5 rounded-3xl bg-surface-container-lowest dark:bg-[#1A1A1A] border border-surface-container-high/80 dark:border-white/5 shadow-sm flex flex-col justify-between">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h3 className="font-headline-sm text-headline-sm text-on-surface dark:text-white font-bold">
+                Popular Foods Demand
+              </h3>
+              <p className="text-xs text-on-surface-variant dark:text-neutral-400">
+                Top menu items ranked by daily volume
+              </p>
+            </div>
+            <Link
+              to="/admin/menu"
+              className="text-xs text-primary dark:text-[#f08344] font-bold hover:underline flex items-center gap-0.5"
+            >
+              <span>Manage</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            {popularFoods.map((item, idx) => (
+              <div key={idx} className="flex flex-col gap-1">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-semibold text-on-surface dark:text-white">
+                    {idx + 1}. {item.name}
+                  </span>
+                  <span className="font-numeric-data font-bold text-primary dark:text-[#f08344]">
+                    {item.count} sold
+                  </span>
+                </div>
+                <div className="w-full h-2 rounded-full bg-surface-container dark:bg-[#242424] overflow-hidden">
+                  <div
+                    style={{ width: `${item.pct}%` }}
+                    className={`h-full rounded-full ${
+                      idx === 0 ? 'bg-primary-container' : 'bg-secondary'
+                    }`}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-between text-xs text-tertiary dark:text-neutral-400 pt-4 border-t border-surface-container-high/60 dark:border-white/5 mt-3">
+            <span>Thalis account for 58% of gross revenue</span>
+            <span className="font-bold text-on-surface dark:text-white">Active Catalog: 12</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+

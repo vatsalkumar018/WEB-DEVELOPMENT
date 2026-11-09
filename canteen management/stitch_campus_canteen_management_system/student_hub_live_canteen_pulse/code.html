@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#9e4200", "surface-container": "#f0eded", "on-secondary-fixed-variant": "#234f30", "on-tertiary": "#ffffff", "surface-container-low": "#f6f3f2", "tertiary": "#645e50", "surface-dim": "#dcd9d9", "on-error": "#ffffff", "surface": "#fcf9f8", "secondary-fixed": "#bdefc4", "surface-bright": "#fcf9f8", "on-primary-container": "#511e00", "primary-fixed": "#ffdbcb", "on-surface": "#1c1b1b", "on-surface-variant": "#574239", "error": "#ba1a1a", "tertiary-container": "#9d9485", "surface-variant": "#e5e2e1", "error-container": "#ffdad6", "background": "#fcf9f8", "primary-fixed-dim": "#ffb691", "on-secondary-fixed": "#00210c", "inverse-on-surface": "#f3f0ef", "on-secondary": "#ffffff", "on-primary-fixed": "#341100", "secondary-fixed-dim": "#a2d2a9", "surface-container-lowest": "#ffffff", "primary-container": "#e87532", "on-tertiary-container": "#322d22", "on-primary-fixed-variant": "#793100", "on-primary": "#ffffff", "outline-variant": "#dec1b4", "outline": "#8a7267", "surface-tint": "#9e4200", "inverse-primary": "#ffb691", "secondary-container": "#bdefc4", "on-background": "#1c1b1b", "on-secondary-container": "#416e4c", "surface-container-highest": "#e5e2e1", "tertiary-fixed": "#ece1d0", "secondary": "#3b6846", "tertiary-fixed-dim": "#cfc5b5", "inverse-surface": "#313030", "on-error-container": "#93000a", "on-tertiary-fixed": "#201b11", "on-tertiary-fixed-variant": "#4c4639", "surface-container-high": "#eae7e7" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1rem", "space-xl": "2.5rem", "gutter-tablet": "1.5rem", "margin": "1rem", "gutter-desktop": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "margin-tablet": "2rem", "space-xs": "0.25rem", "margin-desktop": "3rem", "space-sm": "0.5rem" }, fontFamily: { "body-md": ["Inter"], "display-hero": ["Sora"], "token-callout": ["Sora"], "label-lg": ["Plus Jakarta Sans"], "numeric-data": ["Sora"], "body-sm": ["Inter"], "token-callout-mobile": ["Sora"], "headline-lg": ["Sora"], "body-lg": ["Inter"], "label-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Sora"], "label-sm": ["Plus Jakarta Sans"], "display-hero-mobile": ["Sora"] }, fontSize: { "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-hero": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "token-callout": ["38px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "600" }], "numeric-data": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "token-callout-mobile": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }], "display-hero-mobile": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-gutter flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Token &amp; Bite Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBeIhLwcStAFpbewB_LiVA5M8AB-UB7_coTr295WAKCNJaUtCy8y3TMbfXa8IjGFJSkgHwPKGF-TWCIFovCoOzcmcHakfQFEJoO6Ubj32rC-YiNyJym5gtt64Xl6MFJFeL-tWAvmLSe6ySbuD4ehY0Zu0O1TlOqL6f7nvyoPK2SF1cEOndajt7qsPFLClWCJaFuaN-_1KyX1ZVGLhmWFYv0Wxh3w5DUTBxV3jVR3Vxg4w"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">Token &amp; Bite</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Home</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Campus Block 4 Canteen</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center bg-surface-container-high p-0.5 rounded-full"><button class="min-w-[28px] h-7 px-1.5 rounded-full font-label-sm text-label-sm bg-surface text-primary shadow-[0_1px_4px_rgba(0,0,0,0.04)] font-bold transition-colors" type="button">EN</button><button class="min-w-[28px] h-7 px-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">HI</button><button class="min-w-[28px] h-7 px-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">GU</button></div><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAveiXhp6GBrQ9td0xJfD0cDCW6rB8lwWEaOpnJ02qC4nN_bA0OPf1mGfbUn5rCzEAiZlmEO3x-oNFeKCIpTuBPUdHDbHjIHbsAVtoIiwxDyHN1Xn_bV7o61FnKq7JIwnXuU_GpD5Rwx9Tom9IBja_SCr-ApwQzEGsjXn5fxu4OJm00R2P496fprVcFGbY_vKNKA3T2Bm-ZaAAwjiEcIZEUvuO3gu35q7TIBlxKlhBB"/><span class="absolute -bottom-1 -right-1 px-1 rounded-full bg-secondary text-on-secondary font-label-sm text-[9px] uppercase tracking-wider leading-tight shadow-sm">STD</span></div></div></div><div class="flex items-center justify-between"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container/60"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-container font-semibold">Canteen Open (Avg 8m wait)</span></div><span class="font-label-sm text-label-sm text-tertiary">Fast-Lane Active</span></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Section 1: Operational Pulse & Status Banner -->
+<section class="px-gutter pt-space-sm pb-space-xs">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Good afternoon</span>
+<span class="text-xl">👋</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-secondary-container tracking-wide font-bold">LUNCH IS LIVE</span>
+</div>
+</div>
+<!-- Live metrics ticker line -->
+<div class="flex items-center gap-2 overflow-x-auto py-1.5 no-scrollbar">
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+<span class="font-numeric-data text-numeric-data text-on-surface">11:00 AM – 4:00 PM</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[15px] text-primary">skillet</span>
+<span class="font-numeric-data text-numeric-data text-on-surface">42 prepping</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[15px] text-secondary">timer</span>
+<span class="font-numeric-data text-numeric-data text-on-surface font-semibold">Avg ~8m</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Active Token Ticket Banner (Floating Attention) -->
+<section class="px-gutter my-space-xs">
+<div class="relative overflow-hidden bg-inverse-surface text-inverse-on-surface rounded-xl p-space-md shadow-md">
+<!-- Glow Accent -->
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm tracking-wide">ACTIVE TICKET</span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface/70">Campus Counter #2</span>
+</div>
+<div class="mt-1 flex items-baseline gap-2">
+<span class="font-token-callout-mobile text-token-callout-mobile text-inverse-on-surface tracking-tight font-extrabold">#A-142</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed font-semibold animate-pulse">● Cooking</span>
+</div>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/80 mt-1 line-clamp-1">Special Thali + Cold Coffee</p>
+</div>
+<div class="flex flex-col items-end justify-between self-stretch">
+<div class="text-right">
+<span class="font-label-sm text-[10px] uppercase text-inverse-on-surface/60">Est. Time</span>
+<p class="font-numeric-data text-numeric-data text-primary-fixed font-bold leading-tight">~6 mins</p>
+</div>
+<a class="mt-2 inline-flex items-center gap-1 px-3 py-1.5 bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 active:scale-95 transition-all text-inverse-on-surface rounded-full font-label-md text-label-md" data-path="live-token" href="#">
+<span>Track</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Ticket Perforated Tear-line Illusion -->
+<div class="mt-space-sm pt-2 flex items-center justify-between opacity-40">
+<div class="h-0.5 w-full bg-inverse-on-surface/20 rounded-full"></div>
+</div>
+<div class="mt-2 flex items-center justify-between text-inverse-on-surface/70">
+<span class="font-label-sm text-label-sm">Placed at 12:44 PM • Paid via Campus Pay</span>
+<span class="font-numeric-data text-numeric-data">₹140</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Editorial Statement & CTA Group -->
+<section class="px-gutter pt-space-md pb-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-2 text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Zero Line Protocol</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight">
+        Your food. <br/>Your time. <br/><span class="text-primary-container">Your token.</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Skip the Block 4 crush. Order ahead, monitor prep on screen, grab your hot tray when called.
+      </p>
+<!-- Quick Action CTAs -->
+<div class="mt-space-md flex flex-col gap-2.5">
+<button class="w-full h-12 bg-primary-container text-on-primary-container rounded-xl flex items-center justify-center gap-2 shadow-sm font-label-lg text-label-lg hover:brightness-105 active:scale-[0.98] transition-all" id="orderNowBtn" type="button">
+<span>ORDER NOW</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-11 bg-surface-container text-on-surface rounded-xl flex items-center justify-center gap-1.5 font-label-md text-label-md active:scale-95 transition-all" id="viewTokensBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">confirmation_number</span>
+<span>Live Tokens</span>
+</button>
+<div class="h-11 bg-surface-container-low px-3 rounded-xl flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Wallet Balance</span>
+<span class="font-numeric-data text-numeric-data text-on-surface font-bold">₹340.00</span>
+</div>
+<button aria-label="Add funds to canteen wallet" class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center text-sm font-bold active:scale-90" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Visual How It Works (Four-Step Compact Rail) -->
+<section class="px-gutter py-space-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Campus Quick-Cycle</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">How Token &amp; Bite saves you 20 mins</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">4 STEPS</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Step 01 -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-numeric-data text-label-sm text-primary font-bold">01</span>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</div>
+</div>
+<div class="mt-2">
+<h4 class="font-headline-sm text-label-md text-on-surface">CHOOSE</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Filter live thalis, snacks &amp; diet tags.</p>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-numeric-data text-label-sm text-primary font-bold">02</span>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+</div>
+</div>
+<div class="mt-2">
+<h4 class="font-headline-sm text-label-md text-on-surface">ORDER</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Instant checkout via student wallet.</p>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-numeric-data text-label-sm text-primary font-bold">03</span>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+</div>
+</div>
+<div class="mt-2">
+<h4 class="font-headline-sm text-label-md text-on-surface">GET TOKEN</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Watch your batch ping in real-time.</p>
+</div>
+</div>
+<!-- Step 04 -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-numeric-data text-label-sm text-primary font-bold">04</span>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">takeout_dining</span>
+</div>
+</div>
+<div class="mt-2">
+<h4 class="font-headline-sm text-label-md text-on-surface">COLLECT</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Flash screen at Counter 2 &amp; go eat.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Trending Canteen Favorites (Quick Add Cards) -->
+<section class="px-gutter py-space-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">local_fire_department</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Trending Today</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">Full Menu →</button>
+</div>
+<!-- Favorite 1: Special Thali -->
+<div class="flex flex-col gap-3">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm">
+<img class="w-20 h-20 rounded-lg object-cover shrink-0" data-alt="Traditional North Indian lunch thali platter with paneer curry, dal makhani, warm rotis, fragrant basmati rice, mint raita, and gulab jamun arranged on a warm stone plate with daylight studio illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARE2Qk8KYiO1LvTodv4jU9THsa_hYfTZKCowcbyVX_175LfDoc4DPhqtNL99OXDlHfzNz7mHtlWZbweruj9wLDPYZfd3Gs22DeStBq4Z1zcxkZHJJfFvvg3bzSPdhM-yt2egGt8FrSp5LwodQH1VzyWNKIFc_YV2S8Z3BgmaQFoALVD8jHqogks_VweR1W7_hLRinE2DfzHlNOQ2b9k6vfhefC7WcMZdFcdI27eUAg"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h3 class="font-headline-sm text-label-lg text-on-surface truncate">Special Deluxe Thali</h3>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold shrink-0">VEG</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Paneer butter masala, 2 rotis, jeera rice &amp; gulab jamun</p>
+<div class="flex items-center justify-between mt-2">
+<span class="font-numeric-data text-numeric-data text-on-surface font-extrabold">₹90</span>
+<button class="quick-add-btn h-8 px-3 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1 active:scale-95 transition-transform" data-item="Deluxe Thali" data-price="90" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>ADD</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Favorite 2: Paneer Kathi Roll -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm">
+<img class="w-20 h-20 rounded-lg object-cover shrink-0" data-alt="Golden crisp whole wheat paratha wrap stuffed with grilled tandoori spiced paneer cubes, crunchy pickled onions, green mint chutney, and aromatic spices on parchment paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4tHKN3s2ADDeJAdXj3cjTxRymI9WEHNAs0GdWgshahVBn-9QSw21FFnhGpF1NOWGd6-CFirOqH_dRp5O4djHvtpRGY3CoToshR43ji0R7ZbPSevOZw8YYUzBTAhdPO05kFrHzQLOdFaIr7eiG0ypqkzm2ZNE1Vl8PUYSZLz9A5EWUl6W_UFCCk3orc1WFO8on3edtIt8znx7JPxCqLHbAHSn8bAcmivHutq0Wgyq6"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h3 class="font-headline-sm text-label-lg text-on-surface truncate">Paneer Kathi Roll</h3>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold shrink-0">CHEF PICK</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Smoked cottage cheese, mint chutney, flaky paratha wrap</p>
+<div class="flex items-center justify-between mt-2">
+<span class="font-numeric-data text-numeric-data text-on-surface font-extrabold">₹65</span>
+<button class="quick-add-btn h-8 px-3 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1 active:scale-95 transition-transform" data-item="Paneer Roll" data-price="65" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>ADD</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Favorite 3: Crisp Samosa Plate -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm">
+<img class="w-20 h-20 rounded-lg object-cover shrink-0" data-alt="Two freshly fried golden triangular Indian samosas with spiced potato and pea stuffing served with spicy mint coriander chutney and sweet tamarind sauce on a modern ceramic plate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2JbJu8vL5gxymg7dThetEaso0dqeIwSw0ayojZpcy_OyKw2Z_VMcRw29ajMR8KZo-W0bQCqmqjHy1YhBn8QvepdM_2paStjhOt602VTEwNp_u5fJGPPYTH6VRNcz1IMNQxWK8mwneM6QpvYc7GECDwiuPz-V6NWRfuJi804J8ras5OwDSJuQs5gZdvWU-qlIunm2aQy56szqB4dy1LVxUIzKCX9a53pKzFghqW24J"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h3 class="font-headline-sm text-label-lg text-on-surface truncate">Crisp Samosa (2 pcs)</h3>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] font-bold shrink-0">HOT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Golden flaky pastry, spiced cumin potato, tangy saunth</p>
+<div class="flex items-center justify-between mt-2">
+<span class="font-numeric-data text-numeric-data text-on-surface font-extrabold">₹30</span>
+<button class="quick-add-btn h-8 px-3 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1 active:scale-95 transition-transform" data-item="Samosa Plate" data-price="30" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>ADD</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Favorite 4: Cold Brew Coffee -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm">
+<img class="w-20 h-20 rounded-lg object-cover shrink-0" data-alt="Chilled artisan cold brew coffee served in a sleek ribbed tumbler with clear square ice cubes, creamy milk swirl, and condensation droplets under natural midday lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXXs-5HxNor0-2KXlSaHUWs8Dw5QRaIsY4PTcNSiQecOiHix41LU8ozdtmMXqlNc7-MoZCaa6naes0SXl9q1hKM-M2bIJC6r3KLDSYAnSduE1oGYFiQ6tzvYEyM4jxoQPae_dOh-j_ygF_XRUv7F2G0qgkRVmJr0EBY14J_Cv14B2JeAyZjaRH0TUIGd4jFnU9tHU6QPU0K0LLIY7IQksKA7yVSUr2spSfRrbFGZfk"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h3 class="font-headline-sm text-label-lg text-on-surface truncate">Cold Brew Frappe</h3>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold shrink-0">CHILLED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">Slow-steeped Arabica, roasted chicory, sweet cream</p>
+<div class="flex items-center justify-between mt-2">
+<span class="font-numeric-data text-numeric-data text-on-surface font-extrabold">₹50</span>
+<button class="quick-add-btn h-8 px-3 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1 active:scale-95 transition-transform" data-item="Cold Brew" data-price="50" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>ADD</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Canteen Operational Insights & Hygiene Strip -->
+<section class="px-gutter pt-space-sm pb-space-lg">
+<div class="bg-surface-container rounded-xl p-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Campus Dining Rhythm</span>
+<span class="font-label-sm text-label-sm text-tertiary">Real-time load</span>
+</div>
+<!-- Visual Traffic Bar -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center font-label-sm text-label-sm text-on-surface-variant">
+<span>Current Hall Capacity</span>
+<span class="font-numeric-data text-numeric-data text-secondary font-bold">48% (Moderate)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-secondary w-1/2 rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-tertiary pt-0.5">
+<span>Breakfast (Low)</span>
+<span class="font-bold text-primary">Lunch Rush (Peak 1-2 PM)</span>
+<span>Snacks (Even)</span>
+</div>
+</div>
+<!-- Verified Badges -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">FSSAI Certified</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Block 4 Main Kitchen</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">eco</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Zero Plastic</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Areca Palm Plates</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Toast Notification Element (DOM micro-feedback) -->
+<div class="fixed bottom-20 left-4 right-4 z-40 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none" id="cartToast">
+<div class="bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-xl flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Item added to token cart!</span>
+</div>
+<span class="font-numeric-data text-numeric-data text-primary-fixed font-bold">Review →</span>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const quickAddButtons = document.querySelectorAll('.quick-add-btn');
+    const toast = document.getElementById('cartToast');
+    const toastMsg = document.getElementById('toastMessage');
+    const orderNowBtn = document.getElementById('orderNowBtn');
+    const viewTokensBtn = document.getElementById('viewTokensBtn');
+    let toastTimeout;
+
+    function showToast(text) {
+      if (!toast) return;
+      toastMsg.textContent = text;
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-32', 'opacity-0');
+      }, 2200);
+    }
+
+    quickAddButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const itemName = btn.getAttribute('data-item') || 'Item';
+        const price = btn.getAttribute('data-price') || '0';
+        
+        // Haptic button bounce
+        btn.classList.add('scale-90');
+        setTimeout(() => btn.classList.remove('scale-90'), 150);
+
+        showToast(`${itemName} (₹${price}) added to tray!`);
+      });
+    });
+
+    if (orderNowBtn) {
+      orderNowBtn.addEventListener('click', () => {
+        const menuTab = document.querySelector('nav a[data-path="menu"]');
+        if (menuTab) {
+          menuTab.click();
+        } else {
+          showToast('Navigating to Daily Canteen Menu...');
+        }
+      });
+    }
+
+    if (viewTokensBtn) {
+      viewTokensBtn.addEventListener('click', () => {
+        const tokenTab = document.querySelector('nav a[data-path="live-token"]');
+        if (tokenTab) {
+          tokenTab.click();
+        } else {
+          showToast('Fetching active token board #A-142...');
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-gutter"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-primary font-bold" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="menu" href="#"><span class="material-symbols-outlined text-[22px]">restaurant_menu</span><span class="font-label-sm text-label-sm">Menu</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="live-token" href="#"><span class="material-symbols-outlined text-[22px]">confirmation_number</span><span class="font-label-sm text-label-sm">Live Token</span><span class="absolute top-1 right-2 min-w-[16px] h-4 px-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] flex items-center justify-center font-bold">1</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="kitchen-ops" href="#"><span class="material-symbols-outlined text-[22px]">soup_kitchen</span><span class="font-label-sm text-label-sm">Kitchen</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="profile-history" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>
